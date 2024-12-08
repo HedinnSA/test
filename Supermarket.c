@@ -49,5 +49,19 @@ int main(void){
     
     printf("\n\n %c%c%c Coin Credit \n Dollars: %d\n Change: %d cents.\n",first, middle, last, total_dollars, change);
 
+    char charity;
+        printf("Would you like to donate 10 cents to charity (Y/N)?\n");
+        scanf("%c", &charity);
+
+        if(charity == 'Y'){
+            total_cents -= 10;
+            total_dollars = total_cents / 100;
+            change = total_cents % 100;
+            printf("Thank you for your donation!\n Your final amout is:\n");
+            printf("\n %c%c%c Coin Credit \n Dollars: %d\n Change: %d cents.\n",first, middle, last, total_dollars, change);
+        }else{
+            printf("I guess you hate the poor...\n");
+        }
+
     return 0;
 }
